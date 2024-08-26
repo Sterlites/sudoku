@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .app {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .sudoku-board {
+    display: inline-block;
+    border: 2px solid #333;
+  }
+  
+  .sudoku-row {
+    display: flex;
+  }
+  
+  .sudoku-cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: white;
+  }
+  
+  .sudoku-cell:nth-child(3n) {
+    border-right: 2px solid #333;
+  }
+  
+  .sudoku-row:nth-child(3n) .sudoku-cell {
+    border-bottom: 2px solid #333;
+  }
+  
+  .sudoku-cell.selected {
+    background-color: #e6f3ff;
+  }
+  
+  .controls {
+    margin-top: 1rem;
+  }
+  
+  button, select {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover, select:hover {
+    background-color: #45a049;
+  }
+  
+  .success {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  .error {
+    color: #f44336;
+    font-weight: bold;
+  }
+  
+  .disabled {
+    background-color: #f0f0f0;
+    color: #999;
+  }
+  
+  .shortcuts {
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .shortcuts ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .shortcuts li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .celebration {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .celebration h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .celebration p {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  .sudoku-cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: white;
+    outline: none;
+  }
+  
+  .sudoku-cell:focus {
+    background-color: #e6f3ff;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  }
+  
+  .sudoku-cell.selected {
+    background-color: #e6f3ff;
+  }
